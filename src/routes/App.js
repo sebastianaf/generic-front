@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Login from "../containers/Login";
-import Dashboart from "../containers/Dashboart";
-import Page404 from "../containers/Page404";
+import Login from "../pages/Login";
+import Dashboart from "../pages/Dashboart";
+import Page404 from "../pages/Page404";
 import Modal from "../components/Modal";
-import Practice from "../containers/Practice";
+import Practice from "../pages/Practice";
 
 const App = () => (
   <BrowserRouter>

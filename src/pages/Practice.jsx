@@ -22,25 +22,19 @@ const Practice = () => {
       ></div>
       <div class="flex flex-row">
         <div
-          className={`md:flex flex-col flex-none ${
+          className={`${open ? `w-[270px]` : `w-[70px]`} ${
             !hideSidebar && `hidden`
-          } z-10 bg-slate-700 h-screen transition-[width] duration-500 w-[${
-            open ? `270px` : `70px`
-          }]`}
+          } md:flex flex-col flex-none z-10 bg-slate-700 h-screen transition-[width] duration-500`}
         >
           <div
             className={`p-4 bg-slate-900 h-auto duration-500 cursor-pointer`}
           >
             <div className="flex flex-col items-center justify-center">
-              <img
-                src={logo}
-                alt="logo"
-                className={`max-h-[96px] min-h-[32px]`}
-              />
+              <img src={logo} alt="logo" className={`max-h-[100px]`} />
               <div
-                className={`text-slate-100 font-semibold text-xl whitespace-nowrap ${
-                  !open && `m-[-14px] opacity-0 scale-0 `
-                } duration-500`}
+                className={`${
+                  !open && `m-[-14px] opacity-0 scale-0`
+                } text-slate-100 font-semibold text-xl whitespace-nowrap duration-500`}
               >
                 generic-front
               </div>
@@ -67,8 +61,8 @@ const Practice = () => {
             <FontAwesomeIcon
               icon={faBars}
               className="icon cursor-pointer mx-2 md:invisible"
-              onClick={()=>{
-                setHideSidebar(!hideSidebar)
+              onClick={() => {
+                setHideSidebar(!hideSidebar);
               }}
             />
             <div className="flex justify-center items-center">
