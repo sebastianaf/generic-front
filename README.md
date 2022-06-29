@@ -1,5 +1,5 @@
 # generic-front
-A generic front-end trying to use long lasting libraries all with Docker.
+A generic front-end with create-react-app trying to use long lasting libraries all with Docker.
 
 ## Requirements
 This code is built using React and other packages (please see the `package.json` for more info).
