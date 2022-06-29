@@ -9,12 +9,7 @@ To run this project make sure to install [Docker](https://docs.docker.com/).
 Now let's follow the next steps.
 
 ### 1.Create environment variables
-Create a `.env` file with the environment variables below, this variables will be used by the containers.
-```
-#org-project-app
-API_URL=
-APP_PORT=
-```
+Rename the `.env.example` file to `.env` this variables will be used by the containers.
 
 ### 2.Change `org` and `project` names
 Is recommend to change all the names in files and lines (e.g. in `docker-compose.yml` services and `.Dockerfile` prefix) named with `org` and `project` with your own organization name and project name.
