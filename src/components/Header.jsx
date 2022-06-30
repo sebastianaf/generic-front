@@ -9,7 +9,7 @@ const Header = () => {
   const [hideSidebar, setHideSidebar] = useState(false);
 
   return (
-    <div className="grow flex flex-col h-screen bg-white w-full">
+    <>
       <div className="flex justify-between items-center p-2 bg-slate-300 h-[70px] shadow-lg">
         <FontAwesomeIcon
           icon={faBars}
@@ -32,7 +32,7 @@ const Header = () => {
         </div>
       </div>
       <div className="overflow-x-hidden overflow-y-auto"></div>
-    </div>
+    </>
   );
 };
 
