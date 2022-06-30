@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faChartLine } from "@fortawesome/free-solid-svg-icons";
 
@@ -7,12 +5,14 @@ import SidebarTitle from "../components/SidebarTitle";
 import SidebarItem from "../components/SidebarItem";
 import logo from "../assets/img/logo.png";
 
+//Redux
+import { connect } from "react-redux";
+import { setOpen } from "../actions";
+
 import "../styles/Practice.css";
 
-const Sidebar = () => {
-  const [open, setOpen] = useState(true);
-  const [hideSidebar, setHideSidebar] = useState(false);
-
+const Sidebar = (props) => {
+  const { open, setOpen, hideSidebar, app } = props;
   return (
     <div
       className={`${open ? `w-[270px]` : `w-[70px]`} ${
@@ -27,7 +27,7 @@ const Sidebar = () => {
               !open && `m-[-14px] opacity-0 scale-0`
             } text-slate-100 font-semibold text-xl whitespace-nowrap duration-500`}
           >
-            generic-front
+            {app.name}
           </div>
         </div>
       </div>
@@ -57,4 +57,16 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+const mapStateToProps = (state) => {
+  return {
+    app: state.app,
+    open: state.open,
+    hideSidebar: state.hideSidebar,
+  };
+};
+
+const mapDispatchToProps = {
+  setOpen,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);

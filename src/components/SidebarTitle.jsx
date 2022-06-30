@@ -1,16 +1,25 @@
-import { useState } from "react";
+import React from "react";
+
+//Redux
+import { connect } from "react-redux";
 
 const SidebarTitle = (props) => {
-  const [open, setOpen] = useState(true);
+  const { data, open } = props;
   return (
     <li
       className={`${
         !open && `m-[-20px] opacity-0 scale-0`
       } font-bold uppercase text-xs pb-2 duration-500`}
     >
-      {props.data.title}
+      {data.title}
     </li>
   );
 };
 
-export default SidebarTitle;
+const mapStateToProps = (state) => {
+  return {
+    open: state.open,
+  };
+};
+
+export default connect(mapStateToProps, null)(SidebarTitle);

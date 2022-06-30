@@ -8,8 +8,12 @@ import { Provider } from "react-redux";
 import reducer from "./reducers";
 
 const initialState = {
-  user: {},
-  appName: `generic-app`,
+  app: { name: `generic-front` },
+  user: {
+    name: `generic-user`,
+    role: `generic-role`,
+  },
+  open: true,
 };
 
 const store = createStore(reducer, initialState);
