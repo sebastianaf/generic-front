@@ -9,6 +9,7 @@ import { setHideSidebar } from "../actions";
 
 const Header = (props) => {
   const { hideSidebar, user } = props;
+  //pending
   console.log(hideSidebar);
   return (
     <>

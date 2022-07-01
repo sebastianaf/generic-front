@@ -3,20 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./styles/index.css";
 import App from "./routes/App";
 import reportWebVitals from "./reportWebVitals";
-import { createStore } from "redux";
 import { Provider } from "react-redux";
-import reducer from "./reducers";
-
-const initialState = {
-  app: { name: `generic-front` },
-  user: {
-    name: `generic-user`,
-    role: `generic-role`,
-  },
-  open: true,
-};
-
-const store = createStore(reducer, initialState);
+import { store } from "./stores";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
