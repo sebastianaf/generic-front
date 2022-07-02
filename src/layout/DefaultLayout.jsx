@@ -1,6 +1,6 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Header from "./Header";
+import Sidebar from "../components/Sidebar";
+import Header from "../components/Header";
 
 //Redux
 import { connect } from "react-redux";
@@ -8,11 +8,11 @@ import { connect } from "react-redux";
 const DefaultLayout = (props) => {
   const { children, user } = props;
   return user.name ? (
-    <div className="flex flex-row">
+    <div className={`flex flex-row`}>
       <Sidebar />
-      <div className="grow flex flex-col h-screen bg-white w-full">
+      <div className={`grow flex flex-col h-screen bg-white w-full`}>
         <Header />
-        <div className="overflow-x-hidden overflow-y-auto p-4">{children}</div>
+        <div className={`flex justify-center items-start w-full overflow-x-hidden overflow-y-auto p-4`}>{children}</div>
       </div>
     </div>
   ) : (

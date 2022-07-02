@@ -4,9 +4,9 @@ import Button from "../components/Button";
 const Page404 = () => (
   <div className={`flex flex-col justify-end md:justify-center items-center min-h-screen`}>
     <div
-      className={`flex justify-start items-center max-h-fit max-w-fit bg-slate-200 p-6 rounded-lg shadow-lg m-6`}
+      className={`flex justify-start items-center max-h-fit max-w-fit bg-slate-200 p-6 border rounded-lg shadow-md m-6`}
     >
-      <h1 className="font-light md:text-8xl mx-2 text-6xl text-cyan-600 align-middle">
+      <h1 className={`font-light md:text-8xl mx-2 text-6xl text-cyan-600 align-middle`}>
         404
       </h1>
       <div className={`flex flex-col justify-start mx-4`}>
@@ -16,7 +16,7 @@ const Page404 = () => (
         <div className={`font-light my-4 text-slate-600`}>
           Esta página no se encuentra disponible
         </div>
-        <Button data={{ title: `Regresar`, to: `/dashboard` }} />
+        <Button data={{ title: `Regresar`, to: `/dashboart` }} />
       </div>
     </div>
   </div>

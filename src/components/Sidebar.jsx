@@ -20,8 +20,8 @@ const Sidebar = (props) => {
       } md:flex flex-col flex-none z-10 bg-slate-700 h-screen transition-[width] duration-500`}
     >
       <div className={`p-4 bg-slate-900 h-auto duration-500 cursor-pointer`}>
-        <div className="flex flex-col items-center justify-center">
-          <img src={logo} alt="logo" className={`max-h-[100px]`} />
+        <div className={`flex flex-col items-center justify-center`}>
+          <img src={logo} alt={`logo`} className={`max-h-[100px]`} />
           <div
             className={`${
               !open && `m-[-14px] opacity-0 scale-0`
@@ -31,11 +31,13 @@ const Sidebar = (props) => {
           </div>
         </div>
       </div>
-      <div className="grow p-2 bg-slate-700 text-slate-100 overflow-x-hidden overflow-y-auto">
-        <ul className="py-4 px-1">
+      <div
+        className={`grow p-2 bg-slate-700 text-slate-100 overflow-x-hidden overflow-y-auto`}
+      >
+        <ul className={`py-4 px-1`}>
           <SidebarTitle data={{ title: `sections` }} />
           <SidebarItem
-            data={{ title: `Dashboard`, icon: faChartLine, to: `/dashboard` }}
+            data={{ title: `Dashboart`, icon: faChartLine, to: `/dashboart` }}
           />
         </ul>
       </div>

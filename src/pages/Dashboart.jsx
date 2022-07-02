@@ -1,12 +1,13 @@
 import React from "react";
-import DefaultLayout from "../components/DefaultLayout";
+import DefaultLayout from "../layout/DefaultLayout";
 import ProtectedRoute from "../routes/ProtectedRoute";
+import DashboartLayout from "../layout/DashboartLayout2";
 
 const Dashboart = () => {
   return (
     <ProtectedRoute>
       <DefaultLayout>
-        <div>This is the dashboart</div>
+        <DashboartLayout />
       </DefaultLayout>
     </ProtectedRoute>
   );
