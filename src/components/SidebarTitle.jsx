@@ -9,7 +9,7 @@ const SidebarTitle = (props) => {
     <li
       className={`${
         !open && `m-[-20px] opacity-0 scale-0`
-      } font-bold uppercase text-xs pb-2 duration-500`}
+      } font-bold select-none uppercase text-xs pb-2 duration-500`}
     >
       {data.title}
     </li>

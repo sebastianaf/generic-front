@@ -13,7 +13,9 @@ const Header = (props) => {
   console.log(hideSidebar);
   return (
     <>
-      <div className={`flex justify-between items-center p-2 bg-slate-300 h-[70px] shadow-lg`}>
+      <div
+        className={`flex justify-between items-center p-2 bg-slate-200 h-[70px] border`}
+      >
         <FontAwesomeIcon
           icon={faBars}
           className={`icon cursor-pointer mx-2 md:invisible`}
@@ -21,12 +23,22 @@ const Header = (props) => {
             setHideSidebar(!hideSidebar);
           }}
         />
-        <div className={`flex justify-center items-center px-2 py-1 rounded-md cursor-pointer hover:bg-slate-200 bg-slate-300 duration-500`}>
-          <div className={`flex flex-col items-end justify-center whitespace-nowrap`}>
-            <div className={`m-0 text-left font-semibold`}>{user.name}</div>
-            <div className={`mt-[-5px] text-sm text-left`}>{user.role}</div>
+        <div
+          className={`flex justify-center items-center px-2 py-1 rounded-md cursor-pointer hover:bg-slate-100 duration-500`}
+        >
+          <div
+            className={`flex flex-col items-end justify-center whitespace-nowrap`}
+          >
+            <div className={`m-0 text-left font-semibold select-none`}>
+              {user.name}
+            </div>
+            <div className={`mt-[-5px] text-sm text-left select-none`}>
+              {user.role}
+            </div>
           </div>
-          <div className={`w-[32px] h-[32px] ml-2 rounded-full border border-slate-50 overflow-hidden flex justify-center items-center`}>
+          <div
+            className={`w-[32px] h-[32px] ml-2 rounded-full border border-slate-50 overflow-hidden flex justify-center items-center`}
+          >
             <FontAwesomeIcon
               icon={faUser}
               className={`w-[24px] h-[24px] text-slate-400`}
