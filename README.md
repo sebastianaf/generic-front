@@ -1,6 +1,6 @@
-# generic-front
+# generic-ui
 
-Quickstart front-end with a quick design using React, Tailwind and preconfigured with Docker.
+Quickstart web user interface with designed using React, Tailwind and preconfigured with Docker.
 
 ## Requirements
 
@@ -16,37 +16,17 @@ Rename the `.env.example` file to `.env` this variables will be used by the cont
 
 ### 2.Change `org` and `project` names
 
-Is recommend to change all the names in files and lines (e.g. in `docker-compose.yml` services and `.Dockerfile` prefix) named with `org` and `project` with your own organization name and project name.
+It's recommend to change all the names in files and lines (in `docker-compose.yml` and `Dockerfile`'s files) named with `org` and `project` with your own organization name and project name.
 
-### 3.Setting up a reverse proxy (Optional)
-
-The `docker-compose.yml` file will deploy the app service to work with a home serving environment and a reverse proxy setup. If you don`t have a static public IP we highly recommend to use this API service behind a reverse proxy e.g. [nginx-proxy-manager](https://nginxproxymanager.com/) with [DuckDNS](https://www.duckdns.org) and to configure your port Forwarding ISP modem.
-
-Make sure to include the reverse proxy container into the project network using the following setup in the reverse proxy `docker-compose.yml` file
-
-```
-version: "3.8"
-    services:
-    .
-    .
-    .
-
-networks:
-  org-proxy:
-    name: org-proxy
-  org-project:
-    external: true
-```
-
-### Deploy
+### 3. Deploy
 
 At the end just type
 
 ```
-docker compose -p org-project -up -d --build
+docker build -t org-project-ui
 ```
 
-This commands wake up the server access it thought port specified in `APP_PORT` environment variable.
+This commands will build the Docker image with the project, after `docker run` it can be access it thought port specified in `UI_PORT` environment variable.
 
 ## Folder contents
 
