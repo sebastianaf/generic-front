@@ -1,14 +1,19 @@
 //Redux
 import { createStore } from "redux";
 import reducer from "../reducers";
+import app from "../config/app";
 
 const initialState = {
-  app: { name: `generic-front`, version: `1.5.0` },
-  user: {
-    name: `generic-front`,
-    role: `generic-role`,
-  },
+  app,
+  user: null,
   open: true,
+  modalOpen: false,
+  loading: false,
+  modalOptions: {
+    title: "",
+    description: "",
+    error: false,
+  },
 };
 
 export const store = createStore(reducer, initialState);

@@ -9,7 +9,7 @@ import logo from "../assets/img/logo.png";
 import { connect } from "react-redux";
 import { setOpen } from "../actions";
 
-import "../styles/Practice.css";
+import "../styles/index.css";
 
 const Sidebar = (props) => {
   const { open, setOpen, hideSidebar, app } = props;
@@ -37,7 +37,7 @@ const Sidebar = (props) => {
         <ul className={`py-4 px-1`}>
           <SidebarTitle data={{ title: `sections` }} />
           <SidebarItem
-            data={{ title: `Dashboart`, icon: faChartLine, to: `/dashboart` }}
+            data={{ title: `Dashboard`, icon: faChartLine, to: `/dashboard` }}
           />
         </ul>
       </div>
